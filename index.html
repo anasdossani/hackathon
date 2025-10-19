@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PitchCraft - Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
+  
+  <!-- Login/Signup Page -->
+  <div class="min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white/95 backdrop-blur-lg rounded-3xl shadow-2xl p-8 w-full max-w-md">
+      <div class="text-center mb-8">
+        <div class="text-6xl mb-4">🚀</div>
+        <h2 class="text-4xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-2">PitchCraft</h2>
+        <p class="text-gray-600">Transform your ideas into compelling pitches</p>
+      </div>
+
+      <div class="space-y-4">
+        <input type="email" id="email" placeholder="Email Address"
+          class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all" />
+        
+        <input type="password" id="password" placeholder="Password"
+          class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all" />
+
+        <p id="message" class="text-sm font-semibold text-center min-h-[20px]"></p>
+
+        <div class="flex gap-3">
+          <button onclick="signUp()"
+            class="flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all font-semibold shadow-lg">
+            Sign Up
+          </button>
+          <button onclick="signIn()"
+            class="flex-1 bg-gradient-to-r from-green-500 to-teal-500 text-white px-6 py-3 rounded-xl hover:from-green-600 hover:to-teal-600 transition-all font-semibold shadow-lg">
+            Sign In
+          </button>
+        </div>
+      </div>
+
+      <p class="text-xs text-gray-500 mt-6 text-center">Powered by Firebase 🔥</p>
+    </div>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/12.2.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.2.1/firebase-auth-compat.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAyC-dcIfFmy4Vpntes5nbp-iP2iVl2vv0",
+      authDomain: "ckathon-8cbc6.firebaseapp.com",
+      projectId: "ckathon-8cbc6",
+      storageBucket: "ckathon-8cbc6.firebasestorage.app",
+      messagingSenderId: "514105462107",
+      appId: "1:514105462107:web:ff1f99ce20ec0518495e7e",
+      measurementId: "G-4EMWKQJVHF"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script src="app.js"></script>
+</body>
+</html>
